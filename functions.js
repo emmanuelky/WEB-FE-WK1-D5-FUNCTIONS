@@ -44,12 +44,28 @@ const crazyDiff = function (numb) {
     else if (numb < 19) {
         return ninethNumbMinu
     }
+    return
 }
 crazyDiff(20) //output 3
 crazyDiff(10) // output 9
+
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
 */
+
+const boundary = function (n) {
+    if (n >= 20 && n <= 100) {
+        return true
+    } else if (n === 400) {
+        return true
+    } else {
+        return false
+    }
+
+}
+boundary(50) // true
+boundary(400) // true
+boundary(500) // false
 
 /* WRITE YOUR CODE HERE */
 
