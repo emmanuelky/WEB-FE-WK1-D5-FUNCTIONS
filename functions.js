@@ -105,12 +105,11 @@ Write a function "reverseString" to programmatically reverse a given string (es.
 
 const reverseString = function (s) {
 
-    for (let i = 0; i < i.length / 2; i++) {
-        let revStr = s[i]
-        s[i] = s[s.length - i - 1]
-        s[s.length - i - 1] = revStr
-    }
-    return
+    let splitString = s.split("")
+    let reverseArray = splitString.reverse()
+    let joinArray = reverseArray.join("")
+
+    return joinArray
 }
 
 reverseString("come")
@@ -121,7 +120,12 @@ reverseString("come")
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
+const upperFirst = function (upperstring) {
+    let capLetter = upperstring[0].toUpperCase()
+    return capLetter
+}
 
+upperFirst("learn")
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
