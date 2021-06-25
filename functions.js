@@ -13,10 +13,22 @@ Write a function "area" which receives 2 parameters (l1,l2) and calculates the a
 const area = function (l1, l2) {
     return l1 * l2
 }
-area(2, 2)
+area(2, 2) // output 4
+
 /* EXERCISE 2
 Write a function "crazySum" which receives two integers. It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
+
+const crazySum = function (a, b) {
+    let sum = a + b
+    if (a === b) {
+        return sum * 3
+    } else {
+        return a + b
+    }
+}
+crazySum(2, 2) // 12
+crazySum(2, 3) // 5
 
 /* EXERCISE 3
 Write a function "crazyDiff" that computes the absolute difference between a given number and 19.
