@@ -103,13 +103,25 @@ check3and7(21) // true
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR CODE HERE */
+const reverseString = function (s) {
+
+    for (let i = 0; i < i.length / 2; i++) {
+        let revStr = s[i]
+        s[i] = s[s.length - i - 1]
+        s[s.length - i - 1] = revStr
+    }
+    return
+}
+
+reverseString("come")
+
+
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
-/* WRITE YOUR CODE HERE */
+
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
