@@ -105,33 +105,47 @@ Write a function "reverseString" to programmatically reverse a given string (es.
 
 const reverseString = function (s) {
 
-    let splitString = s.split("")
-    let reverseArray = splitString.reverse()
-    let joinArray = reverseArray.join("")
+    //...............Method 1.................//
+    // return s.split("").reverse().join(""); 
 
-    return joinArray
+    //...............Method 2.................//
+    let newStrr = ""
+    for (let i = s.length - 1; i >= 0; i--) {
+        newStrr += s[i]
+    }
+    return newStrr
 }
 
-reverseString("come")
+console.log(reverseString("hello"))
 
 
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
-
 const upperFirst = function (upperstring) {
-    let capLetter = upperstring[0].toUpperCase()
-    return capLetter
+
+    let capLetter = upperstring.toLowerCase().split(' ')
+
+    for (i = 0; i < capLetter.length; i++) {
+        capLetter[i] = capLetter[i].charAt(0).toUpperCase() + capLetter[i].substring(1)
+    }
+
+    return capLetter.join(' ')
 }
 
-upperFirst("learn")
+console.log(upperFirst("leaRn ROAd toDlo"))
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 
-/* WRITE YOUR CODE HERE */
+const cutString = function (cutstrn) {
+    return firsLastStr = cutstrn.slice(1, -1)
+
+}
+console.log(cutString("loading"))
+
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
